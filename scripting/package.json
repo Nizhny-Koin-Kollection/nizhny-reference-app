@@ -1,0 +1,11 @@
+{
+  "name": "scripting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "AmoDinho",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.33.1",
+    "dotenv": "^16.3.1"
+  }
+}
