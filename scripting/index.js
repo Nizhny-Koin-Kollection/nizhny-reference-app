@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const uploadFile = require('./supabase');
-const insertPlayer = require('./supabase');
+
 const localFolderPath = path.join(__dirname, 'teams');
 
 const getName = (string) => string.replace(/\.png$/, '').split(' ');
