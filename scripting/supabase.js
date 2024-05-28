@@ -20,4 +20,32 @@ const uploadFile = async ({ fileData, filePath }) => {
   return { data, error };
 };
 
+const insertPlayer = async ({
+  playerName,
+  playerSurname,
+  overall,
+  position,
+  imageUrl,
+  coinID,
+  teamID,
+}) => {
+  const { data, error } = await supabase
+    .from('Players')
+    .insert([
+      {
+        playerName: playerName,
+        playerSurname: playerSurname,
+        overall: overall,
+        position: position,
+        imageUrl: imageUrl,
+        coinID: coinID,
+        teamID: teamID,
+      },
+    ])
+    .select();
+
+  return { data, error };
+};
+
 module.exports = uploadFile;
+module.exports = insertPlayer;
